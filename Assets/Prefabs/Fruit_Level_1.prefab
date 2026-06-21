@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2076866086488311650}
   - component: {fileID: 1222061683232967228}
   - component: {fileID: 4789682397355002873}
+  - component: {fileID: 7305075138590673688}
+  - component: {fileID: -8130544773100543274}
   m_Layer: 0
   m_Name: Fruit_Level_1
   m_TagString: Untagged
@@ -156,3 +158,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7305075138590673688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594582906330731025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945181f22fa614bec8581983690beaa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fruit
+  fruitLevel: 1
+--- !u!114 &-8130544773100543274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594582906330731025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84cca9189ad74fd3a313005a5206396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FruitMerge

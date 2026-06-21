@@ -6,6 +6,8 @@ public class FruitSpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float minX = -2.2f;
     [SerializeField] private float maxX = 2.2f;
+    
+    public GameObject[] FruitPrefabs => fruitPrefabs;
 
     private GameObject currentFruit;
     private bool isReadyToDrop = false;
@@ -39,8 +41,13 @@ public class FruitSpawner : MonoBehaviour
 
     private void SpawnFruit()
     {
-        int randomIndex = Random.Range(0, fruitPrefabs.Length);
-        currentFruit = Instantiate(fruitPrefabs[randomIndex], spawnPoint.position, Quaternion.identity);
+        int randomIndex = Random.Range(0, 3);
+
+        currentFruit = Instantiate(
+            fruitPrefabs[randomIndex],
+            spawnPoint.position,
+            Quaternion.identity
+        );
 
         Rigidbody2D rb = currentFruit.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
