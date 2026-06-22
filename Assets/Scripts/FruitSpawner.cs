@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FruitSpawner : MonoBehaviour
 {
@@ -6,14 +7,20 @@ public class FruitSpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float minX = -2.2f;
     [SerializeField] private float maxX = 2.2f;
-    
+
+    [SerializeField] private Image nextFruitImage;
+
     public GameObject[] FruitPrefabs => fruitPrefabs;
 
     private GameObject currentFruit;
     private bool isReadyToDrop = false;
 
+    private int nextFruitIndex;
+
     private void Start()
     {
+        nextFruitIndex = Random.Range(0, 3);
+        UpdateNextFruitImage();
         SpawnFruit();
     }
 
@@ -41,10 +48,12 @@ public class FruitSpawner : MonoBehaviour
 
     private void SpawnFruit()
     {
-        int randomIndex = Random.Range(0, 3);
+        int currentIndex = nextFruitIndex;
+
+        nextFruitIndex = Random.Range(0, 3);
 
         currentFruit = Instantiate(
-            fruitPrefabs[randomIndex],
+            fruitPrefabs[currentIndex],
             spawnPoint.position,
             Quaternion.identity
         );
@@ -53,11 +62,14 @@ public class FruitSpawner : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Kinematic;
 
         isReadyToDrop = true;
+
+        UpdateNextFruitImage();
     }
 
     private void DropFruit()
     {
         Debug.Log("Drop!");
+
         Rigidbody2D rb = currentFruit.GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Dynamic;
 
@@ -65,5 +77,18 @@ public class FruitSpawner : MonoBehaviour
         isReadyToDrop = false;
 
         Invoke(nameof(SpawnFruit), 1f);
+    }
+
+    private void UpdateNextFruitImage()
+    {
+        if (nextFruitImage == null) return;
+
+        SpriteRenderer spriteRenderer =
+            fruitPrefabs[nextFruitIndex].GetComponent<SpriteRenderer>();
+
+        if (spriteRenderer != null)
+        {
+            nextFruitImage.sprite = spriteRenderer.sprite;
+        }
     }
 }
