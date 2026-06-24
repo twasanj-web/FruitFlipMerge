@@ -5,6 +5,7 @@ public class FruitMerge : MonoBehaviour
     private Fruit myFruit;
     private bool hasMerged = false;
 
+        
     private void Awake()
     {
         myFruit = GetComponent<Fruit>();
@@ -30,6 +31,18 @@ public class FruitMerge : MonoBehaviour
 
         int nextLevel = myFruit.fruitLevel + 1;
 
+        switch (nextLevel)
+        {
+            case 1: ScoreManager.Instance.AddScore(2); break;
+            case 2: ScoreManager.Instance.AddScore(4); break;
+            case 3: ScoreManager.Instance.AddScore(8); break;
+            case 4: ScoreManager.Instance.AddScore(12); break;
+            case 5: ScoreManager.Instance.AddScore(18); break;
+            case 6: ScoreManager.Instance.AddScore(25); break;
+            case 7: ScoreManager.Instance.AddScore(40); break;
+            case 8: ScoreManager.Instance.AddScore(60); break;
+        }
+
         FruitSpawner spawner = FindFirstObjectByType<FruitSpawner>();
 
         if (nextLevel >= spawner.FruitPrefabs.Length)
@@ -51,4 +64,6 @@ public class FruitMerge : MonoBehaviour
         Destroy(otherFruit.gameObject);
         Destroy(gameObject);
     }
-}
+    
+    }
+

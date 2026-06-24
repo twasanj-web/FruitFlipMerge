@@ -19,7 +19,7 @@ public class FruitSpawner : MonoBehaviour
 
     private void Start()
     {
-        nextFruitIndex = Random.Range(0, 3);
+        nextFruitIndex = Random.Range(0, 4);
         UpdateNextFruitImage();
         SpawnFruit();
     }
@@ -50,7 +50,7 @@ public class FruitSpawner : MonoBehaviour
     {
         int currentIndex = nextFruitIndex;
 
-        nextFruitIndex = Random.Range(0, 3);
+        nextFruitIndex = Random.Range(0, 4);
 
         currentFruit = Instantiate(
             fruitPrefabs[currentIndex],

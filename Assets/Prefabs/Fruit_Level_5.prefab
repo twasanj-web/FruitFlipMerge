@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3430572021597328786
+--- !u!1 &308601978127241923
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 197696002997604593}
-  - component: {fileID: 5908063726436612160}
-  - component: {fileID: 6632248946171089007}
-  - component: {fileID: 4501559347951071767}
-  - component: {fileID: 6346840551271440141}
-  - component: {fileID: 176992445743346431}
+  - component: {fileID: 5055072814158409885}
+  - component: {fileID: 5752628085920855088}
+  - component: {fileID: 948064033669090199}
+  - component: {fileID: 5412400796921484926}
+  - component: {fileID: -6330452583973357308}
+  - component: {fileID: 7606623684110072265}
   m_Layer: 0
   m_Name: Fruit_Level_5
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &197696002997604593
+--- !u!4 &5055072814158409885
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3430572021597328786}
+  m_GameObject: {fileID: 308601978127241923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6689, y: -2.3969, z: 0}
-  m_LocalScale: {x: 0.49276674, y: 0.52459717, z: 1}
+  m_LocalPosition: {x: 1.73, y: -0.3117, z: 0}
+  m_LocalScale: {x: 0.32370338, y: 0.32081756, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5908063726436612160
+--- !u!212 &5752628085920855088
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3430572021597328786}
+  m_GameObject: {fileID: 308601978127241923}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -85,23 +85,23 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -247299542525384033, guid: 4b7dd02ca7ccc403d9e73e5c592482e9, type: 3}
+  m_Sprite: {fileID: 4717609192445815204, guid: d0cc827b2aa9e45fcb1138e1126ee226, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.9, y: 8.25}
+  m_Size: {x: 5.29, y: 8.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!58 &6632248946171089007
+--- !u!58 &948064033669090199
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3430572021597328786}
+  m_GameObject: {fileID: 308601978127241923}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -130,15 +130,15 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 4.1249995
---- !u!50 &4501559347951071767
+  m_Radius: 4.065
+--- !u!50 &5412400796921484926
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3430572021597328786}
+  m_GameObject: {fileID: 308601978127241923}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -158,26 +158,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6346840551271440141
+--- !u!114 &-6330452583973357308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3430572021597328786}
+  m_GameObject: {fileID: 308601978127241923}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 945181f22fa614bec8581983690beaa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   fruitLevel: 5
---- !u!114 &176992445743346431
+--- !u!114 &7606623684110072265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3430572021597328786}
+  m_GameObject: {fileID: 308601978127241923}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e84cca9189ad74fd3a313005a5206396, type: 3}
