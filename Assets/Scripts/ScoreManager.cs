@@ -50,4 +50,16 @@ public class ScoreManager : MonoBehaviour
     {
         bestScoreText.text = bestScore.ToString();
     }
+
+    public int GetCurrentScore()
+    {
+        Debug.Log("GetCurrentScore = " + currentScore);
+        return currentScore;
+    }
+
+    public int GetBestScore()
+    {
+        Debug.Log("GetBestScore = " + bestScore);
+        return bestScore;
+    }
 }
