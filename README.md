@@ -1,6 +1,6 @@
 # Fruit Flip Merge
 
-![Banner](README/banner.png)
+![Banner](banner.png)
 
 Fruit Flip Merge is a 2D mobile game developed in **Unity (C#)**.
 
@@ -10,7 +10,7 @@ The game is inspired by classic merge games, where players merge identical fruit
 
 ## Gameplay
 
-![Gameplay](README/gameplay.png)
+![Gameplay](gameplay.png)
 
 ### Key Features
 
@@ -37,7 +37,7 @@ The player can use the Flip button **once per game** to flip all fruits vertical
 
 | Before Flip | After Flip |
 |--------------|------------|
-| ![](README/before-flip.png) | ![](README/after-flip.png) |
+| ![](before-flip.png) | ![](after-flip.png) |
 
 ---
 
@@ -47,19 +47,21 @@ The project is divided into independent systems to keep the code clean, modular,
 
 | Script | Responsibility |
 |---------|----------------|
-| FruitSpawner | Spawns fruits, handles player input, and displays the next fruit preview. |
-| FruitMerge | Detects collisions, merges fruits, creates the next fruit, and awards points. |
-| ScoreManager | Updates the current score and saves the best score using PlayerPrefs. |
-| FlipManager | Controls the Flip mechanic. |
-| GameOverTrigger | Detects the losing condition. |
-| GameOverManager | Displays the Game Over panel and handles Restart and Home actions. |
-| AudioManager | Plays the merge sound effect. |
+| **FruitSpawner** | Spawns fruits, handles player input, and displays the next fruit preview. |
+| **FruitMerge** | Detects collisions, merges fruits, creates the next fruit, and awards points. |
+| **ScoreManager** | Updates the current score and saves the best score using PlayerPrefs. |
+| **FlipManager** | Controls the Flip mechanic. |
+| **GameOverTrigger** | Detects the losing condition. |
+| **GameOverManager** | Displays the Game Over panel and handles Restart and Home actions. |
+| **AudioManager** | Plays the merge sound effect. |
 
 ---
 
 ## Design Decisions
 
-Each gameplay system has its own responsibility. Separating gameplay, UI, audio, and score management keeps the project organized, easier to maintain, and simple to expand with new gameplay features.
+The project follows a modular architecture where each gameplay system has a single responsibility.
+
+Separating gameplay, UI, audio, and score management makes the project easier to maintain, debug, and expand with new gameplay features.
 
 ---
 
@@ -69,9 +71,9 @@ To make the gameplay more enjoyable and responsive, I added several feedback sys
 
 - Merge sound effect.
 - Real-time score updates.
-- Best Score saving.
+- Best Score saving using PlayerPrefs.
 - Next Fruit Preview.
 - Game Over panel.
 - Home screen bounce animation.
 
-![Game Over](README/gameover.png)
+![Game Over](gameover.png)
