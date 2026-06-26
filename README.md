@@ -37,7 +37,7 @@ The player can use the Flip button **once per game** to flip all fruits vertical
 
 | Before Flip | After Flip |
 |--------------|------------|
-| ![](before-flip.png) | ![](after-flip.png) |
+| <img src="before-flip..png" width="300"> | <img src="after-flip.png" width="300"> |
 
 ---
 
