@@ -4,7 +4,7 @@
 
 Fruit Flip Merge is a 2D mobile game developed in **Unity (C#)**.
 
-The game is inspired by classic merge games, where players merge identical fruits to create larger fruits and increase their score. To improve the gameplay experience, I introduced a unique **Flip** mechanic that helps players recover fruits trapped at the bottom of the box.
+The game is inspired by classic merge games, where players merge identical fruits to create larger fruits and increase their score. This project demonstrates gameplay programming, physics-based interactions, modular architecture, and a custom **Flip** mechanic designed to improve the player experience.
 
 ---
 
@@ -48,11 +48,12 @@ The project is divided into independent systems to keep the code clean, modular,
 | Script | Responsibility |
 |---------|----------------|
 | **FruitSpawner** | Spawns fruits, handles player input, and displays the next fruit preview. |
-| **FruitMerge** | Detects collisions, merges fruits, creates the next fruit, and awards points. |
+| **FruitMerge** | Detects collisions, merges fruits, creates higher-level fruits, and awards points. |
+| **Fruit** | Stores fruit data such as the fruit level. |
 | **ScoreManager** | Updates the current score and saves the best score using PlayerPrefs. |
-| **FlipManager** | Controls the Flip mechanic. |
+| **FlipManager** | Controls the one-time Flip mechanic. |
 | **GameOverTrigger** | Detects the losing condition. |
-| **GameOverManager** | Displays the Game Over panel and handles Restart and Home actions. |
+| **GameOverManager** | Displays the Game Over panel and handles the end of the game. |
 | **AudioManager** | Plays the merge sound effect. |
 
 ---
