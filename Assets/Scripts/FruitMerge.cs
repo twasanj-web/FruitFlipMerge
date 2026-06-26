@@ -42,6 +42,7 @@ public class FruitMerge : MonoBehaviour
             case 7: ScoreManager.Instance.AddScore(40); break;
             case 8: ScoreManager.Instance.AddScore(60); break;
         }
+        AudioManager.Instance.PlayMergeSound();
 
         FruitSpawner spawner = FindFirstObjectByType<FruitSpawner>();
 

@@ -39,7 +39,8 @@ public class FruitSpawner : MonoBehaviour
                 0
             );
 
-            if (Input.GetMouseButtonDown(0))
+          
+            if (Input.GetMouseButtonUp(0))
             {
                 DropFruit();
             }
